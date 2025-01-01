@@ -10,24 +10,25 @@ source:
   sha256: a75c8a3b505a7cd68fbc1b0d1844b104f5c35685da398838ffd639e7bbdac5b8
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - numpy
     - pyyaml
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - pyyaml
 
 test:
   requires:
     - pytest
+    - python {{ python_min }}
   source_files:
     - test/
   imports:
