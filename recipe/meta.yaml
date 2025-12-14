@@ -1,5 +1,5 @@
 {% set name = "general_robotics_toolbox" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/rpiRobotics/rpi_general_robotics_toolbox_py/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a75c8a3b505a7cd68fbc1b0d1844b104f5c35685da398838ffd639e7bbdac5b8
+  sha256: 25921bd38ff2130478a6ee1f373a44adeb0da700611088cbbd656e0568b0a690
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
